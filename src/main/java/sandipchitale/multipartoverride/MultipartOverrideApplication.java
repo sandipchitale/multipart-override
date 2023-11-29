@@ -36,9 +36,9 @@ public class MultipartOverrideApplication {
 
 	@Bean
 	public CommandLineRunner clr (ApplicationContext applicationContext) {
-	    return (args) -> {
+		return (args) -> {
 			System.out.println("MultipartResolver bean = " + applicationContext.getBeansOfType(MultipartResolver.class));
-	    };
+		};
 	}
 
 }
