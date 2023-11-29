@@ -19,11 +19,6 @@ import java.util.stream.Stream;
 public class MultipartOverrideApplication {
 
 	public static void main(String[] args) {
-		args = Stream.of(Stream.of("Mama"),
-							 Stream.of("Mia"),
-							 Arrays.stream(args))
-					 .flatMap(s -> s)
-					 .toArray(String[]::new);
 		new SpringApplicationBuilder(MultipartOverrideApplication.class)
 				.initializers((ConfigurableApplicationContext applicationContext) -> {
 					ConfigurableEnvironment environment = applicationContext.getEnvironment();
